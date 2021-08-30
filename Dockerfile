@@ -1,7 +1,7 @@
 FROM ubuntu:20.10
 
 ENV DEBIAN_FRONTEND=noninteractive; 
-RUN apt update && apt install tzdata g++  make cmake git curl unzip tar zip -y
+RUN apt update && apt install tzdata g++ make cmake git curl unzip tar zip pkg-config -y
 
 RUN cp /usr/share/zoneinfo/Asia/Seoul /etc/localtime && echo "Asia/Seoul" > /etc/timezone
 
